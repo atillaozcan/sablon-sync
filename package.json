@@ -1,0 +1,18 @@
+{
+  "name": "sablon-sync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Şablon Program cloud sync backend (Cloudflare Worker + D1). Customer self-hosted.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --experimental-sqlite test-worker.mjs",
+    "db:create": "wrangler d1 create sablon-sync-db",
+    "db:schema": "wrangler d1 execute sablon-sync-db --remote --file=schema.sql",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

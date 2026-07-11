@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sablon-sync",
+  "main": "src/index.js",
+  "compatibility_date": "2025-01-01",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sablon-sync-db",
+      "database_id": "e8359f10-187e-4cf0-bdee-909a8b809376"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "sablon-sync-files","preview_bucket_name": "sablon-sync-files"
+    }
+  ]
+}
